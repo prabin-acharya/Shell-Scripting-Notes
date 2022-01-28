@@ -4,7 +4,10 @@
 # chmod +x filename.sh
 # To add executable permission to the fille
 
-# ./filename.sh To run the file/script
+# Adding #!/bin/bash as the first line of your script, tells the OS to invoke the specified shell to execute the commands 
+# that follow in the script.
+# "#!" is often referred to as a "hash-bang", "she-bang" or "sha-bang".
+
 
 # ECHO COMMAND
 # echo Hello World!
@@ -67,3 +70,17 @@
 # fi
 
 
+
+#CASE STATEMENT
+read -p "Are you 21 or over? Y/N " ANSWER
+case "$ANSWER" in 
+  [yY] | [yY][eE][sS])
+    echo "You can have a beer :)"
+    ;;
+  [nN] | [nN][oO])
+    echo "Sorry, no drinking"
+    ;;
+  *)
+    echo "Please enter y/yes or n/no"
+    ;;
+esac

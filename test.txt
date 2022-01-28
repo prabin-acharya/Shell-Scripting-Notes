@@ -1,0 +1,9 @@
+The shebang is a directive to the loader to use the program which is specified after the #!
+as the interpreter for the file in question when you try to execute it. So, if you try to run a
+file called foo.sh which has #!/bin/bash at the top, the actual command that runs is /bin/bash foo.sh.
+This is a flexible way of using different interpreters for different programs. This is something implemented at 
+the system level and the user level API is the shebang convention.
+
+It's also worth knowing that the shebang is a magic number - a human readable one that identifies the file 
+as a script for the given interpreter.
+(from: https://stackoverflow.com/a/8968001)
